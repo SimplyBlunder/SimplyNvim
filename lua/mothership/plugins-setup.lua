@@ -29,11 +29,19 @@ return packer.startup(function(use)
   use("wbthomason/packer.nvim")
 --implementing file explorer
   use("nvim-tree/nvim-tree.lua")
-
+--statusline
+  use("nvim-lualine/lualine.nvim")
 --icons
   use("kyazdani42/nvim-web-devicons")
 --current color scheme that has been implemented
-  use('folke/tokyonight.nvim') -- test colour scheme 
+  use('folke/tokyonight.nvim') -- test colour scheme
+--plenary (used for telescope)
+  use("nvim-lua/plenary.nvim")
+
+--fuzzy finding
+  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
+  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+
   if packer_bootstrap then
     require("packer").sync()
   end
