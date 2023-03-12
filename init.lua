@@ -1,0 +1,5 @@
+require("mothership.plugins-setup")
+require("mothership.core.options")
+require("mothership.core.keymaps")
+require("mothership.core.colorscheme")
+require("mothership.plugins.nvim-tree")
