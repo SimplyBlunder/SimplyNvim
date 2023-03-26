@@ -13,4 +13,10 @@ These have been left as default
 --Tree view--
 <\ + e> = Main tree window
 
+--LSP config / mason--
+:Mason
+
+--Packer (for installed new packer plugins
+:PackerSync
+
 

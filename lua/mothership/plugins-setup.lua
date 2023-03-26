@@ -52,7 +52,26 @@ return packer.startup(function(use)
   use("saadparwaiz1/cmp_luasnip")
   use("rafamadriz/friendly-snippets")
 
-  if packer_bootstrap then
+  --managing and installing lsp servers
+  use("williamboman/mason.nvim")
+  use("williamboman/mason-lspconfig.nvim")
+
+  --configuring lsp servers
+  use("neovim/nvim-lspconfig")
+  use("hrsh7th/cmp-nvim-lsp")
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    requires = {
+      { "nvim-tree/nvim-web-devicons" },
+      { "nvim-treesitter/nvim-treesitter" },
+    },
+  }) 
+  --below are unused / enhanced lsp uis
+  --use("jose-elias-alvarez/typescript.nvim")
+  use("onsails/lspkind.nvim")
+
+   if packer_bootstrap then
     require("packer").sync()
   end
 end)
