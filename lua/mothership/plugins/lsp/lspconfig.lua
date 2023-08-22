@@ -36,11 +36,26 @@ end
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
 --used for setting up the LSP 
-lspconfig["jedi_language_server"].setup({
+lspconfig["pyright"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
 
+lspconfig["clangd"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
+
+lspconfig["cmake"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
+lspconfig["rust_analyzer"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
 
 -- configure lua server (with special settings)
 lspconfig["lua_ls"].setup({
