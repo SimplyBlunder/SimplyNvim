@@ -24,7 +24,9 @@ mason_lspconfig.setup({
   ensure_installed = {
     "lua_ls",
     "rust_analyzer",
-    "jedi_language_server",
+    "pyright",
+    "cssls",
+    "cmake",
   },
 
  -- auto-install configured servers (with lspconfig)
